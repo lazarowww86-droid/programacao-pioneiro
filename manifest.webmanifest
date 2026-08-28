@@ -1,0 +1,19 @@
+{
+  "name": "Programação do Pioneiro Regular",
+  "short_name": "Pioneiro",
+  "description": "Acompanhamento pessoal da meta mensal de 50 horas.",
+  "start_url": "/programacao-pioneiro/",
+  "scope": "/programacao-pioneiro/",
+  "display": "standalone",
+  "background_color": "#f5f8f7",
+  "theme_color": "#0d4f53",
+  "lang": "pt-BR",
+  "icons": [
+    {
+      "src": "/programacao-pioneiro/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}

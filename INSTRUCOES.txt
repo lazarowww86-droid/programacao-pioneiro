@@ -1,0 +1,13 @@
+PUBLICAÇÃO NO GITHUB PAGES
+
+Usuário: lazarowww86-droid
+Repositório: programacao-pioneiro
+Endereço final: https://lazarowww86-droid.github.io/programacao-pioneiro/
+
+Os arquivos desta pasta já estão preparados para serem publicados na raiz do
+repositório. Depois do envio, nas configurações do repositório, abra Pages e
+selecione a publicação pela ramificação main e pela pasta raiz (/ root).
+
+IMPORTANTE: os dados salvos no endereço antigo não passam automaticamente para
+o GitHub. No endereço antigo, use “Baixar backup”. Depois, no endereço novo,
+use “Restaurar backup”.
