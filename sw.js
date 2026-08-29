@@ -1,4 +1,4 @@
-const CACHE_NAME = "pioneiro-regular-github-v1";
+const CACHE_NAME = "pioneiro-regular-github-v2";
 const BASE_PATH = new URL("./", self.location.href).pathname;
 const CORE_FILES = [
   BASE_PATH,
