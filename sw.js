@@ -1,4 +1,4 @@
-const CACHE_NAME = "pioneiro-regular-github-v2";
+const CACHE_NAME = "pioneiro-regular-github-v3";
 const BASE_PATH = new URL("./", self.location.href).pathname;
 const CORE_FILES = [
   BASE_PATH,
@@ -44,6 +44,19 @@ self.addEventListener("fetch", (event) => {
 
   event.respondWith(
     (async () => {
+      if (event.request.mode === "navigate") {
+        try {
+          const response = await fetch(event.request);
+          if (response.ok) {
+            const cache = await caches.open(CACHE_NAME);
+            await cache.put(BASE_PATH, response.clone());
+          }
+          return response;
+        } catch {
+          return (await caches.match(BASE_PATH)) || Response.error();
+        }
+      }
+
       const cached = await caches.match(event.request);
       if (cached) return cached;
 
@@ -55,9 +68,6 @@ self.addEventListener("fetch", (event) => {
         }
         return response;
       } catch {
-        if (event.request.mode === "navigate") {
-          return (await caches.match(BASE_PATH)) || Response.error();
-        }
         return Response.error();
       }
     })(),
